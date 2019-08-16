@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3209228566045364719}
   - component: {fileID: 3209228566045364712}
   - component: {fileID: 949513780241419695}
+  - component: {fileID: 8054263992783137823}
   m_Layer: 0
   m_Name: BasicItem
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!82 &949513780241419695
 AudioSource:
   m_ObjectHideFlags: 0
@@ -215,3 +216,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8054263992783137823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209228566045364713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395513da1ee2cc94c9bab0b1be70d5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
