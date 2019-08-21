@@ -2,23 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemBehaviour : MonoBehaviour
+public class SpawnerBehaviour : MonoBehaviour
 {
-    string text;
-    int category;
+
+    private int timer;
+
+    public Object item;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.y < -5)
+        ++timer;
+
+        if (timer > 20)
         {
-            Destroy(gameObject);
+            timer = 0;
+            Instantiate(item, new Vector3(0, 5, 0), Quaternion.identity);
         }
     }
 }
