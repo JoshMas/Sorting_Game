@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayWebcamTexture : MonoBehaviour
 {
+    private WebCamTexture tex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class PlayWebcamTexture : MonoBehaviour
         Renderer rend = this.GetComponentInChildren<Renderer>();
 
         // assuming the first available WebCam is desired
-        WebCamTexture tex = new WebCamTexture(devices[0].name);
+        tex = new WebCamTexture(devices[0].name);
         rend.material.mainTexture = tex;
         tex.Play();
     }
@@ -26,6 +28,6 @@ public class PlayWebcamTexture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

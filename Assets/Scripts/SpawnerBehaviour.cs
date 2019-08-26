@@ -5,24 +5,24 @@ using UnityEngine;
 public class SpawnerBehaviour : MonoBehaviour
 {
 
-    private int timer;
+    private float interval;
 
     public Object item;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = 0;
+        interval = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ++timer;
+        interval -= Time.deltaTime;
 
-        if (timer > 20)
+        if (interval < 0)
         {
-            timer = 0;
+            interval = 1.0f;
             Instantiate(item, new Vector3(0, 5, 0), Quaternion.identity);
         }
     }
