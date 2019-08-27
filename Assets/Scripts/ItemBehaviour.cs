@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemBehaviour : MonoBehaviour
 {
-    string text;
-    int category;
+    private int category;
+    SpriteRenderer itemSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        itemSprite = GetComponent<SpriteRenderer>();
+        category = Random.Range(0, 2);
+        if (category == 0)
+        {
+            itemSprite.color = Color.red;
+        }
     }
 
     // Update is called once per frame
@@ -20,5 +26,10 @@ public class ItemBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public bool MatchesCategory(int container)
+    {
+        return container == category;
     }
 }
