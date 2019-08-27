@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 1699845100}
   m_Layer: 0
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -791,7 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 7844379764962504731, guid: 1ba66f37d6737b0438f82303776d5d88, type: 3}
-  blockSize: 1
+  blockSize: 0.5
 --- !u!1 &1982413897
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1982413898
 BoxCollider2D:
   m_ObjectHideFlags: 0

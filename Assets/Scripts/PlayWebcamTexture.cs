@@ -9,10 +9,10 @@ public class PlayWebcamTexture : MonoBehaviour
     public Object item;
     private Object[] hitboxes;
     [SerializeField]
-    private int blockSize;
+    private float blockSize;
     private int count;
-    private int x;
-    private int y;
+    private float x;
+    private float y;
 
     // Start is called before the first frame update
     void Start()
@@ -33,18 +33,17 @@ public class PlayWebcamTexture : MonoBehaviour
         tex = new WebCamTexture(devices[0].name);
         rend.material.mainTexture = tex;
 
-        blockSize = 1;
         count = 0;
         x = 0;
         y = 0;
-        while (y + blockSize < tex.height)
+        while (y + blockSize < 10 + blockSize)
         {
-            while (x + blockSize < tex.width)
+            while (x + blockSize < 18 + blockSize)
             {
-                Instantiate(item, new Vector3(x - 9, y - 5, 0), Quaternion.identity);
-                ++count;
+                Instantiate(item, new Vector3(x - 9 + blockSize/2, y - 5 + blockSize/2, 0), Quaternion.identity);
+                count++;
                 x += blockSize;
-                Debug.Log("" + count + ", " + tex.width + ", " + tex.height);
+                Debug.Log("" + count);
             }
             x = 0;
             y += blockSize;
@@ -58,19 +57,21 @@ public class PlayWebcamTexture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        while (y < tex.height)
-        {
-            while (x < tex.width)
-            {
-
-                x += blockSize;
-            }
-            x = 0;
-            y += blockSize;
-        }
-        */
+        //Debug.Log(tex.width + "|" + tex.height);
     }
 
+    public int getWidth()
+    {
+        return tex.width;
+    }
 
+    public int getHeight()
+    {
+        return tex.height;
+    }
+
+    public Color getColor(int x, int y)
+    {
+        return tex.GetPixel(x, y);
+    }
 }
