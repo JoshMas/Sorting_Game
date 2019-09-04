@@ -43,7 +43,7 @@ public class PlayWebcamTexture : MonoBehaviour
                 Instantiate(item, new Vector3(x - 9 + blockSize/2, y - 5 + blockSize/2, 0), Quaternion.identity);
                 count++;
                 x += blockSize;
-                Debug.Log("" + count);
+                //Debug.Log("" + count);
             }
             x = 0;
             y += blockSize;
