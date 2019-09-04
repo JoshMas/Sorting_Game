@@ -22,7 +22,7 @@ public class SpawnerBehaviour : MonoBehaviour
 
         if (interval < 0)
         {
-            interval = 2.0f;
+            interval = 3.0f;
             Instantiate(item, new Vector3(0, 5, 0), Quaternion.identity);
         }
     }

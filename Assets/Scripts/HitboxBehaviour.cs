@@ -40,7 +40,7 @@ public class HitboxBehaviour : MonoBehaviour
     {
         hitboxSprite.color = storedColor;
         newColor = script.getColor(pixelWidth, pixelHeight);
-        if (Mathf.Abs(newColor.r - storedColor.r) + Mathf.Abs(newColor.b - storedColor.b) + Mathf.Abs(newColor.g - storedColor.g) < 0.2)
+        if (Mathf.Abs(newColor.r - storedColor.r) + Mathf.Abs(newColor.b - storedColor.b) + Mathf.Abs(newColor.g - storedColor.g) < 0.3)
         {
             hitbox.isTrigger = true;
             hitboxSprite.enabled = false;

@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class ItemBehaviour : MonoBehaviour
 {
     private int category;
-    SpriteRenderer itemSprite;
+    private SpriteRenderer itemSprite;
+
+    private Object gameController;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameController = GameObject.FindWithTag("GameController");
         itemSprite = GetComponent<SpriteRenderer>();
         category = Random.Range(0, 2);
         if (category == 0)
