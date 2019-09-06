@@ -42,10 +42,12 @@ public class ContainerBehaviour : MonoBehaviour
         if (collision.gameObject.GetComponent<ItemBehaviour>().MatchesCategory(category))
         {
             cPlay = true;
+            ScoreScript.scoreValue += 10;
         }
         else
         {
             iPlay = true;
+            ScoreScript.scoreValue -= 1;
         }
     }
 }
