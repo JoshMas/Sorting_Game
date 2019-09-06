@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cf7c10b697adf4b9622d948e3ad6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 4900000, guid: a5b1e60c1f046a44f9cf37ec098ed49c, type: 3}
+  text: {fileID: 4900000, guid: 4df87955773d0dc49b1aece09f4f9fcc, type: 3}
   containerList:
   - {fileID: 666364178}
   - {fileID: 935999719}
@@ -369,7 +369,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662736568}
-  m_Text: Even Numbers
+  m_Text: Odd Numbers
   m_OffsetZ: -1
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -472,7 +472,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994546036}
-  m_Text: Odd Numbers
+  m_Text: Even Numbers
   m_OffsetZ: -1
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -539,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1244847684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -688,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1428656502
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -874,7 +874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1699845097
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -965,7 +965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1982413898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,7 @@ PrefabInstance:
     - target: {fileID: 7454916720344627698, guid: 2bd3a4ffa3b42814ab35b585e61c98c6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: -7.7
       objectReference: {fileID: 0}
     - target: {fileID: 7454916720344627698, guid: 2bd3a4ffa3b42814ab35b585e61c98c6,
         type: 3}

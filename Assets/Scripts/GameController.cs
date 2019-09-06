@@ -53,4 +53,9 @@ public class GameController : MonoBehaviour
             containerList[i].GetComponent<ContainerBehaviour>().SetCategory(containers[i + 1]);
         }
     }
+
+    public string GetRandomItem()
+    {
+        return items[UnityEngine.Random.Range(0, items.Count)];
+    }
 }

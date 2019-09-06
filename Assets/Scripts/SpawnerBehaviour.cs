@@ -12,7 +12,7 @@ public class SpawnerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        interval = 0.0f;
+        interval = 6.0f;
     }
 
     // Update is called once per frame
