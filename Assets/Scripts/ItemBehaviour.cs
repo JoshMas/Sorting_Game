@@ -1,19 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemBehaviour : MonoBehaviour
 {
-    private int category;
-    SpriteRenderer itemSprite;
+    private string category;
+    private SpriteRenderer itemSprite;
+    private TextMesh text;
+
+    private GameController gameController;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        text = GetComponentInChildren<TextMesh>();
+        
+        string[] itemContent = gameController.GetRandomItem().Split(new string[] { ", " }, StringSplitOptions.None);
+        text.text = itemContent[0];
+        category = itemContent[1];
+
         itemSprite = GetComponent<SpriteRenderer>();
-        category = Random.Range(0, 2);
-        if (category == 0)
+        int colour = UnityEngine.Random.Range(0, 2);
+        if (colour == 0)
         {
             itemSprite.color = Color.red;
         }
@@ -28,8 +39,8 @@ public class ItemBehaviour : MonoBehaviour
         }
     }
 
-    public bool MatchesCategory(int container)
+    public bool MatchesCategory(string container)
     {
-        return container == category;
+        return container.Equals(category);
     }
 }

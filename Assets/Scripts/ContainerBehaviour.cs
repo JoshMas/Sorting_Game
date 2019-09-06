@@ -5,7 +5,7 @@ using UnityEngine;
 public class ContainerBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private int category;
+    private string category;
 
     [SerializeField]
     private AudioSource correct;
@@ -15,11 +15,14 @@ public class ContainerBehaviour : MonoBehaviour
     private AudioSource incorrect;
     private bool iPlay;
 
+    private TextMesh text;
+
     // Start is called before the first frame update
     void Start()
     {
         cPlay = false;
         iPlay = false;
+        text = GetComponentInChildren<TextMesh>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,12 @@ public class ContainerBehaviour : MonoBehaviour
             incorrect.Play();
             iPlay = false;
         }
+    }
+
+    public void SetCategory(string newCategory)
+    {
+        category = newCategory;
+        text.text = newCategory;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
