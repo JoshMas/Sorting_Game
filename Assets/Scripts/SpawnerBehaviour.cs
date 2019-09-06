@@ -12,7 +12,7 @@ public class SpawnerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        interval = 1.0f;
+        interval = 6.0f;
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class SpawnerBehaviour : MonoBehaviour
 
         if (interval < 0)
         {
-            interval = 1.0f;
+            interval = 3.0f;
             Instantiate(item, new Vector3(0, 5, 0), Quaternion.identity);
         }
     }

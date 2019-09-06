@@ -1,0 +1,61 @@
+2, Countries, Cities
+Addis Ababa, Cities
+Ankara, Cities
+Baghdad, Cities
+Bangkok, Cities
+Beijing, Cities
+Beirut, Cities
+Brussels, Cities
+Bucharest, Cities
+Budapest, Cities
+Caracas, Cities
+Dakar, Cities
+Damascus, Cities
+Dhaka, Cities
+Edinburg, Cities
+Hanoi, Cities
+Helsinki, Cities
+Kabul, Cities
+Kiev, Cities
+Kuala Lumpur, Cities
+La Paz, Cities
+Madrid, Cities
+Nassau, Cities
+Ottawa, Cities
+Phnom Penh, Cities
+Pyongyang, Cities
+Rome, Cities
+Seoul, Cities
+Stockholm, Cities
+Tehran, Cities
+Tunis, Cities
+Belarus, Countries
+Belize, Countries
+Bolivia, Countries
+Botswana, Countries
+Chad, Countries
+Chile, Countries
+Grenada, Countries
+Guatemala, Countries
+Haiti, Countries
+Honduras, Countries
+Ivory Coast, Countries
+Jamaica, Countries
+Latvia, Countries
+Madagascar, Countries
+Maldives, Countries
+Malta, Countries
+Marshall Islands, Countries
+Montenegro, Countries
+Panama, Countries
+Qatar, Countries
+Solomon Islands, Countries
+Tanzania, Countries
+Togo, Countries
+Trinidad & Tobago, Countries
+Tunisia, Countries
+Uruguay, Countries
+Vanuatu, Countries
+Wales, Countries
+Yemen, Countries
+Zimbabwe, Countries
