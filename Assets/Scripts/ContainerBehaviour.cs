@@ -5,7 +5,7 @@ using UnityEngine;
 public class ContainerBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private int category;
+    private string category;
 
     [SerializeField]
     private AudioSource correct;
@@ -35,6 +35,11 @@ public class ContainerBehaviour : MonoBehaviour
             incorrect.Play();
             iPlay = false;
         }
+    }
+
+    public void SetCategory(string newCategory)
+    {
+        category = newCategory;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

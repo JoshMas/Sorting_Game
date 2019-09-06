@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemBehaviour : MonoBehaviour
 {
-    private int category;
+    private string category;
     private SpriteRenderer itemSprite;
 
     private Object gameController;
@@ -15,8 +15,8 @@ public class ItemBehaviour : MonoBehaviour
     {
         gameController = GameObject.FindWithTag("GameController");
         itemSprite = GetComponent<SpriteRenderer>();
-        category = Random.Range(0, 2);
-        if (category == 0)
+        int colour = Random.Range(0, 2);
+        if (colour == 0)
         {
             itemSprite.color = Color.red;
         }
@@ -31,8 +31,8 @@ public class ItemBehaviour : MonoBehaviour
         }
     }
 
-    public bool MatchesCategory(int container)
+    public bool MatchesCategory(string container)
     {
-        return container == category;
+        return container.Equals(category);
     }
 }
