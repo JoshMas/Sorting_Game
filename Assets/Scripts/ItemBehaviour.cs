@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ItemBehaviour : MonoBehaviour
 {
+    [SerializeField]
     private string category;
     private SpriteRenderer itemSprite;
     private TextMesh text;
@@ -41,6 +42,6 @@ public class ItemBehaviour : MonoBehaviour
 
     public bool MatchesCategory(string container)
     {
-        return container.Equals(category);
+        return category.Contains(container);
     }
 }
