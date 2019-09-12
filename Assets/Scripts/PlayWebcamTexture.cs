@@ -74,4 +74,9 @@ public class PlayWebcamTexture : MonoBehaviour
     {
         return tex.GetPixel(x, y);
     }
+
+    public void StopWebCam()
+    {
+        tex.Stop();
+    }
 }

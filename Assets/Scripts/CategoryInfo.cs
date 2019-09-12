@@ -1,22 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ScoreScript : MonoBehaviour
+public class CategoryInfo : MonoBehaviour
 {
-    public static int scoreValue = 0;
-    Text score;
+    public TextAsset category;
+    public int score;
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        score = GetComponent<Text>();
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score: " + scoreValue;
+        
     }
 }

@@ -20,6 +20,8 @@
 8 / 2, Even Numbers
 10 / 2, Odd Numbers
 0 / 3, Even Numbers
+7 / 1, Odd Numbers
 8 * 1, Even Numbers
+21 / 3, Odd Numbers
 4 - 0, Even Numbers
 9 / 1, Odd Numbers
