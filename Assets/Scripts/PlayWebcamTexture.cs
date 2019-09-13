@@ -60,19 +60,26 @@ public class PlayWebcamTexture : MonoBehaviour
         //Debug.Log(tex.width + "|" + tex.height);
     }
 
-    public int getWidth()
+    public int GetWidth()
     {
         return tex.width;
     }
 
-    public int getHeight()
+    public int GetHeight()
     {
         return tex.height;
     }
 
-    public Color getColor(int x, int y)
+    public Color GetColor(int x, int y)
     {
-        return tex.GetPixel(x, y);
+        if (tex.isPlaying)
+        {
+            return tex.GetPixel(x, y);
+        }
+        else
+        {
+            return new Color(0, 0, 0);
+        }
     }
 
     public void StopWebCam()

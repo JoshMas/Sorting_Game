@@ -73,6 +73,7 @@ public class GameController : MonoBehaviour
         if (timer > 66 && gameInfo != null)
         {
             GameObject.FindWithTag("Canvas").GetComponent<PlayWebcamTexture>().StopWebCam();
+            GetComponent<AudioSource>().Stop();
             gameInfo.GetComponent<CategoryInfo>().score = ScoreScript.scoreValue;
             ScoreScript.scoreValue = 0;
             ScoreScript.timerValue = 60.0f;

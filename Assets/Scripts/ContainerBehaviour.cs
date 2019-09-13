@@ -58,5 +58,6 @@ public class ContainerBehaviour : MonoBehaviour
             iPlay = true;
             ScoreScript.scoreValue -= 1;
         }
+        Destroy(collision.gameObject);
     }
 }

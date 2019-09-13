@@ -24,22 +24,22 @@ public class HitboxBehaviour : MonoBehaviour
 
         script = GameObject.FindWithTag("Canvas").GetComponent<PlayWebcamTexture>();
 
-        int canvasWidth = script.getWidth();
-        int canvasHeight = script.getHeight();
+        int canvasWidth = script.GetWidth();
+        int canvasHeight = script.GetHeight();
 
         pixelWidth = (int)((9 - hitboxTransform.position.x) / 18 * canvasWidth);
         pixelHeight = (int)((hitboxTransform.position.y + 5) / 10 * canvasHeight);
 
         //Debug.Log(pixelWidth + "|" + pixelHeight);
 
-        storedColor = script.getColor(pixelWidth, pixelHeight);
+        storedColor = script.GetColor(pixelWidth, pixelHeight);
     }
 
     // Update is called once per frame
     void Update()
     {
         hitboxSprite.color = storedColor;
-        newColor = script.getColor(pixelWidth, pixelHeight);
+        newColor = script.GetColor(pixelWidth, pixelHeight);
         if (Mathf.Abs(newColor.r - storedColor.r) + Mathf.Abs(newColor.b - storedColor.b) + Mathf.Abs(newColor.g - storedColor.g) < 0.3)
         {
             hitbox.isTrigger = true;
