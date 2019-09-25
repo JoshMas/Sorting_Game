@@ -45,14 +45,15 @@ public class GameController : MonoBehaviour
         {
             Debug.Log(item);
         }
-
-        SetUpContainers(items[0]);
-        items.RemoveAt(0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (containerList[0].GetComponent<ContainerBehaviour>().HasNoCategory())
+        {
+            SetUpContainers(items[0]);
+        }
         timer += Time.deltaTime;
         if (timer > 2 && timer < 4)
         {
@@ -99,6 +100,6 @@ public class GameController : MonoBehaviour
 
     public string GetRandomItem()
     {
-        return items[UnityEngine.Random.Range(0, items.Count)];
+        return items[UnityEngine.Random.Range(1, items.Count)];
     }
 }

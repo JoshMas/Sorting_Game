@@ -1,0 +1,19 @@
+3, Nouns, Verbs, Misspelled Words
+cat, Nouns
+dog, Nouns
+bird, Nouns
+tree, Nouns
+water, Nouns
+car, Nouns
+run, Verbs
+fly, Verbs
+jump, Verbs
+eat, Verbs
+pour, Verbs
+melt, Verbs
+berd, Misspelled Words
+eet, Misspelled Words
+wattr, Misspelled Words
+howse, Misspelled Words
+graet, Misspelled Words
+fone, Misspelled Words

@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395513da1ee2cc94c9bab0b1be70d5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  category: 
 --- !u!1 &4175503220684530393
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +315,7 @@ TextMesh:
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 400
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 0}
   m_Color:

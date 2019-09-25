@@ -1,0 +1,22 @@
+3, Ancient, Modern, Middle Ages
+Caesar, Ancient
+Genghis Khan, Ancient
+Tutankhamun, Ancient
+Sun Tzu, Ancient
+Ramesses II, Ancient
+Cleopatra, Ancient
+Archimedes, Ancient
+Abraham Lincoln, Modern
+Ned Kelly, Modern
+Henry Ford, Modern
+Mahatma Gandhi, Modern
+Martin Luther King Jr., Modern
+Florence Nightingale, Modern
+Alan Turing, Modern
+Henry VIII, Middle Ages
+Napoleon, Middle Ages
+William the Conqueror, Middle Ages
+Joan of Arc, Middle Ages
+Johannes Gutenberg, Middle Ages
+Shakespeare, Middle Ages
+Leonardo da Vinci, Middle Ages

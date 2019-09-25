@@ -1,0 +1,15 @@
+2, Physical, Chemical
+Melting, Physical
+Crumpling, Physical
+Slicing, Physical
+Evaporating, Physical
+Crushing, Physical
+Moving, Physical
+Blending, Physical
+Burning, Chemical
+Baking, Chemical
+Ripening, Chemical
+Rusting, Chemical
+Igniting, Chemical
+Rotting, Chemical
+Photosynthesis, Chemical

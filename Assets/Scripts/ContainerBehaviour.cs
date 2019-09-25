@@ -46,6 +46,11 @@ public class ContainerBehaviour : MonoBehaviour
         text.text = newCategory;
     }
 
+    public bool HasNoCategory()
+    {
+        return text.text.Equals("AAAAA");
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<ItemBehaviour>().MatchesCategory(category))
