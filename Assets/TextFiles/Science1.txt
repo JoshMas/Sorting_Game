@@ -6,6 +6,8 @@ Evaporating, Physical
 Crushing, Physical
 Moving, Physical
 Blending, Physical
+Sanding, Physical
+Mixing, Physical
 Burning, Chemical
 Baking, Chemical
 Ripening, Chemical
@@ -13,3 +15,5 @@ Rusting, Chemical
 Igniting, Chemical
 Rotting, Chemical
 Photosynthesis, Chemical
+Fireworks, Chemical
+Fizzing, Chemical

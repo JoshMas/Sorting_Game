@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
         timer = 0;
         if (gameInfo != null)
         {
-            text = gameInfo.GetComponent<CategoryInfo>().category;
+            text = gameInfo.GetComponent<GameInfo>().category;
         }
 
         items = new List<string>();
@@ -41,10 +41,12 @@ public class GameController : MonoBehaviour
         {
             items.Add(item);
         }
+        /*
         foreach (string item in items)
         {
             Debug.Log(item);
         }
+        */
     }
 
     // Update is called once per frame
@@ -75,7 +77,7 @@ public class GameController : MonoBehaviour
         {
             GameObject.FindWithTag("Canvas").GetComponent<PlayWebcamTexture>().StopWebCam();
             GetComponent<AudioSource>().Stop();
-            gameInfo.GetComponent<CategoryInfo>().score = ScoreScript.scoreValue;
+            gameInfo.GetComponent<GameInfo>().score = ScoreScript.scoreValue;
             ScoreScript.scoreValue = 0;
             ScoreScript.timerValue = 60.0f;
             SceneManager.LoadScene("MainMenu");

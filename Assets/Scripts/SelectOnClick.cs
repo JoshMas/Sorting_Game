@@ -16,11 +16,11 @@ public class SelectOnClick : MonoBehaviour
 
     public void MathSelected()
     {
-        gameInfo.GetComponent<CategoryInfo>().category = categories[0];
+        gameInfo.GetComponent<GameInfo>().category = categories[0];
     }
 
     public void GeoSelected()
     {
-        gameInfo.GetComponent<CategoryInfo>().category = categories[1];
+        gameInfo.GetComponent<GameInfo>().category = categories[1];
     }
 }
