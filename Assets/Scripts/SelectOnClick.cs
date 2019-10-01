@@ -27,7 +27,17 @@ public class SelectOnClick : MonoBehaviour
         scroll = GameObject.FindGameObjectWithTag("Scroll");
         int count = 0;
 
-        string[] files = Directory.GetFiles("../Subjects");
+        string[] files = new string[0];
+
+        if (Directory.Exists("Subjects"))
+        {
+            files = Directory.GetFiles("Subjects");
+        } else
+        {
+            files = Directory.GetFiles("../Subjects");
+        }
+
+        
         foreach (string path in files)
         {
             StreamReader reader = new StreamReader(path);
