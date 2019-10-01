@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cf7c10b697adf4b9622d948e3ad6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 4900000, guid: a5b1e60c1f046a44f9cf37ec098ed49c, type: 3}
+  subject: 
   containerList:
   - {fileID: 666364178}
   - {fileID: 935999719}

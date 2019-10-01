@@ -9,6 +9,7 @@ TagManager:
   - Canvas
   - Spawner
   - Category
+  - Scroll
   layers:
   - Default
   - TransparentFX

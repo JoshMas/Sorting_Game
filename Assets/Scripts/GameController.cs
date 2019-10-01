@@ -9,9 +9,12 @@ public class GameController : MonoBehaviour
 {
     private float timer;
     private List<string> items;
-
+    /*
     [SerializeField]
     private TextAsset text;
+    */
+    [SerializeField]
+    private string subject;
 
     [SerializeField]
     private List<GameObject> containerList;
@@ -32,11 +35,12 @@ public class GameController : MonoBehaviour
         timer = 0;
         if (gameInfo != null)
         {
-            text = gameInfo.GetComponent<GameInfo>().category;
+            //text = gameInfo.GetComponent<GameInfo>().category;
+            subject = gameInfo.GetComponent<GameInfo>().subject;
         }
 
         items = new List<string>();
-        string[] content = text.text.Split('\n');
+        string[] content = subject.Split('\n');
         foreach (string item in content)
         {
             items.Add(item);
