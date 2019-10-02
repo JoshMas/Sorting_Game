@@ -10,6 +10,7 @@ public class ButtonBehaviour : MonoBehaviour
     private Button button;
 
     private GameObject gameInfo;
+    private string buttonName;
 
     private void Awake()
     {
@@ -31,11 +32,13 @@ public class ButtonBehaviour : MonoBehaviour
     public void AddSubjectInfo(string data, string name)
     {
         button.onClick.AddListener(delegate { SubjectSelected(data); });
-        GetComponentInChildren<Text>().text = name.Split('.')[0];
+        buttonName = name.Split('.')[0];
+        GetComponentInChildren<Text>().text = buttonName;
     }
 
     void SubjectSelected(string data)
     {
         gameInfo.GetComponent<GameInfo>().subject = data;
+        gameInfo.GetComponent<GameInfo>().currentSubjectName = buttonName;
     }
 }
