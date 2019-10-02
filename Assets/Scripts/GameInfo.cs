@@ -20,7 +20,15 @@ public class GameInfo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string path = Directory.GetFiles("../Subjects")[0];
+        string path = "";
+        if (Directory.Exists("Subjects"))
+        {
+            path = Directory.GetFiles("Subjects")[0];
+        }
+        else
+        {
+            path = Directory.GetFiles("../Subjects")[0];
+        }
         StreamReader reader = new StreamReader(path);
         subject = reader.ReadToEnd();
         score = 0;
