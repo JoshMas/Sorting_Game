@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class SpawnerBehaviour : MonoBehaviour
 {
-
+    [SerializeField]
     private float interval;
 
-    public Object item;
+    public GameObject item;
+
+    private GameInfo script;
+
+    [SerializeField]
+    private Vector3 itemSpawn;
+
+    private void Awake()
+    {
+        script = GameObject.FindWithTag("Category").GetComponent<GameInfo>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         interval = 6.0f;
+        itemSpawn = new Vector3(0, 5, 0);
     }
 
     // Update is called once per frame
@@ -22,8 +33,9 @@ public class SpawnerBehaviour : MonoBehaviour
 
         if (interval < 0)
         {
-            interval = 3.0f;
-            Instantiate(item, new Vector3(0, 5, 0), Quaternion.identity);
+            interval = script.itemSpeed;
+            GameObject newItem = Instantiate(item, itemSpawn, Quaternion.identity);
+            newItem.GetComponent<ItemBehaviour>().ChangeGravity(script.itemGravity);
         }
     }
 }

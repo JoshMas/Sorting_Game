@@ -19,4 +19,9 @@ public class LoadOnClick : MonoBehaviour {
         SceneManager.LoadScene("CategoryScene");
     }
 
+    public void GotoOptionsScene()
+    {
+        SceneManager.LoadScene("OptionsScene");
+    }
+
 }

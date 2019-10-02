@@ -7,6 +7,7 @@ public class GameInfo : MonoBehaviour
 {
     //public TextAsset category;
     public string subject;
+    public string currentSubjectName;
     public int score;
     public float itemSpeed;
     public float itemGravity;
@@ -31,6 +32,7 @@ public class GameInfo : MonoBehaviour
         }
         StreamReader reader = new StreamReader(path);
         subject = reader.ReadToEnd();
+        currentSubjectName = Path.GetFileName(path).Split('.')[0];
         score = 0;
         itemSpeed = 3.0f;
         itemGravity = 0.5f;

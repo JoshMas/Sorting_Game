@@ -44,4 +44,9 @@ public class ItemBehaviour : MonoBehaviour
     {
         return category.Contains(container);
     }
+
+    public void ChangeGravity(float gravity)
+    {
+        GetComponent<Rigidbody2D>().gravityScale = gravity;
+    }
 }

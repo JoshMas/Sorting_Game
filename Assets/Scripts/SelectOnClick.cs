@@ -42,7 +42,7 @@ public class SelectOnClick : MonoBehaviour
         {
             StreamReader reader = new StreamReader(path);
             subjects.Add(reader.ReadToEnd());
-            GameObject newButton = Instantiate(button, new Vector3(count * 175 + 225, 175), Quaternion.identity, scroll.transform);
+            GameObject newButton = Instantiate(button, new Vector3((count * Screen.width / 5) + Screen.width / 10, Screen.height / 2), Quaternion.identity, scroll.transform);
             newButton.GetComponent<ButtonBehaviour>().AddSubjectInfo(subjects[subjects.Count - 1], Path.GetFileName(path));
             ++count;
         }

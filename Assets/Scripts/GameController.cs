@@ -22,11 +22,11 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private GameObject banner;
 
-    private GameObject gameInfo;
+    private GameInfo gameInfo;
 
     private void Awake()
     {
-        gameInfo = GameObject.FindWithTag("Category");
+        gameInfo = GameObject.FindWithTag("Category").GetComponent<GameInfo>();
     }
 
     // Start is called before the first frame update
@@ -36,7 +36,8 @@ public class GameController : MonoBehaviour
         if (gameInfo != null)
         {
             //text = gameInfo.GetComponent<GameInfo>().category;
-            subject = gameInfo.GetComponent<GameInfo>().subject;
+            subject = gameInfo.subject;
+            ScoreScript.timerValue = gameInfo.gameTime - 6.0f;
         }
 
         items = new List<string>();
@@ -77,13 +78,13 @@ public class GameController : MonoBehaviour
         {
             ScoreScript.timerValue -= Time.deltaTime;
         }
-        if (timer > 66 && gameInfo != null)
+        if (timer > gameInfo.gameTime && gameInfo != null)
         {
             GameObject.FindWithTag("Canvas").GetComponent<PlayWebcamTexture>().StopWebCam();
             GetComponent<AudioSource>().Stop();
-            gameInfo.GetComponent<GameInfo>().score = ScoreScript.scoreValue;
+            gameInfo.score = ScoreScript.scoreValue;
             ScoreScript.scoreValue = 0;
-            ScoreScript.timerValue = 60.0f;
+            ScoreScript.timerValue = gameInfo.gameTime;
             SceneManager.LoadScene("MainMenu");
         }
     }
