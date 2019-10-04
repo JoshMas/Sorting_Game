@@ -53,12 +53,12 @@ public class SelectOnClick : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            scroll.transform.Translate(new Vector3(-count, 0, 0));
+            scroll.transform.Translate(new Vector3(count, 0, 0));
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            scroll.transform.Translate(new Vector3(count, 0, 0));
+            scroll.transform.Translate(new Vector3(-count, 0, 0));
         }
     }
 
