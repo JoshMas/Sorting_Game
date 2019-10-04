@@ -80,13 +80,23 @@ public class GameController : MonoBehaviour
         }
         if (timer > gameInfo.gameTime && gameInfo != null)
         {
-            GameObject.FindWithTag("Canvas").GetComponent<PlayWebcamTexture>().StopWebCam();
-            GetComponent<AudioSource>().Stop();
-            gameInfo.score = ScoreScript.scoreValue;
-            ScoreScript.scoreValue = 0;
-            ScoreScript.timerValue = gameInfo.gameTime;
-            SceneManager.LoadScene("MainMenu");
+            StopGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            StopGame();
+        }
+    }
+
+    private void StopGame()
+    {
+        GameObject.FindWithTag("Canvas").GetComponent<PlayWebcamTexture>().StopWebCam();
+        GetComponent<AudioSource>().Stop();
+        gameInfo.score = ScoreScript.scoreValue;
+        ScoreScript.scoreValue = 0;
+        ScoreScript.timerValue = gameInfo.gameTime;
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void SetUpContainers(string containerLine)
