@@ -272,7 +272,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4fec4a37c10980a43889d25078ba03ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -463,7 +463,7 @@ PrefabInstance:
     - target: {fileID: 1721590832032547453, guid: 03c56aab8d6f0b442879f040bedc871d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1721590832032547453, guid: 03c56aab8d6f0b442879f040bedc871d,
         type: 3}
@@ -528,7 +528,9 @@ PrefabInstance:
     - target: {fileID: 1721590833148860180, guid: 03c56aab8d6f0b442879f040bedc871d,
         type: 3}
       propertyPath: m_Text
-      value: "\u2190"
+      value: '
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1721590833148860180, guid: 03c56aab8d6f0b442879f040bedc871d,
         type: 3}
@@ -545,6 +547,12 @@ PrefabInstance:
       propertyPath: m_FontData.m_MinSize
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1721590832032547451, guid: 03c56aab8d6f0b442879f040bedc871d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80f5ed17c1713a146906af0bb527fadf,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03c56aab8d6f0b442879f040bedc871d, type: 3}
 --- !u!224 &1308269153 stripped
