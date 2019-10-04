@@ -9,6 +9,7 @@ public class SelectOnClick : MonoBehaviour
     private List<TextAsset> categories;
 
     private List<string> subjects;
+    private float count;
 
     private GameObject gameInfo;
     private GameObject scroll;
@@ -25,7 +26,7 @@ public class SelectOnClick : MonoBehaviour
     {
         subjects = new List<string>();
         scroll = GameObject.FindGameObjectWithTag("Scroll");
-        int count = 0;
+        count = 0;
 
         string[] files = new string[0];
 
@@ -52,12 +53,12 @@ public class SelectOnClick : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            scroll.transform.Translate(Vector3.left);
+            scroll.transform.Translate(new Vector3(-count, 0, 0));
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            scroll.transform.Translate(Vector3.right);
+            scroll.transform.Translate(new Vector3(count, 0, 0));
         }
     }
 
