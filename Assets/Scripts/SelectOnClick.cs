@@ -32,9 +32,14 @@ public class SelectOnClick : MonoBehaviour
         if (Directory.Exists("Subjects"))
         {
             files = Directory.GetFiles("Subjects");
-        } else
+        }
+        else if (Directory.Exists("../Subjects"))
         {
             files = Directory.GetFiles("../Subjects");
+        }
+        else
+        {
+            files = Directory.GetFiles(Application.streamingAssetsPath);
         }
 
         

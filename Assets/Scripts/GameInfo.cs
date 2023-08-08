@@ -26,9 +26,13 @@ public class GameInfo : MonoBehaviour
         {
             path = Directory.GetFiles("Subjects")[0];
         }
-        else
+        else if (Directory.Exists("../Subjects"))
         {
             path = Directory.GetFiles("../Subjects")[0];
+        }
+        else
+        {
+            path = Directory.GetFiles(Application.streamingAssetsPath)[0];
         }
         StreamReader reader = new StreamReader(path);
         subject = reader.ReadToEnd();
